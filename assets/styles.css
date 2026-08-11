@@ -1491,11 +1491,27 @@ body::before {
     font-size: 2.4rem;
   }
 
-  .skills-grid, .hub-grid, .contact-grid {
-    grid-template-columns: 1fr;
+  .skills-grid,
+  .hub-grid,
+  .contact-grid,
+  .education-grid {
+    grid-template-columns: 1fr !important;
   }
 
-  .hero-stats-grid, .about-mini-stats {
+  .contact-grid {
+    width: 100% !important;
+  }
+
+  .contact-card,
+  .education-card,
+  .project-card-inner,
+  .github-feed-panel .hub-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-stats-grid,
+  .about-mini-stats {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1544,15 +1560,18 @@ body::before {
   .education-card {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 
   .education-card .edu-date {
     align-self: flex-start;
+    width: 100%;
   }
 
   .github-feed-panel .github-repo-grid {
     flex-direction: column;
     align-items: stretch;
+    gap: 1rem;
   }
 
   .github-feed-panel .hub-card {
