@@ -1,117 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education | Aadya Raj</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education — Aadya Raj | Data Analyst</title>
+  <meta name="description" content="Education and Certifications of Aadya Raj.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <div class="logo-mark">AR</div>
-                <div class="logo-text">
-                    <span class="logo-name">Aadya Raj</span>
-                    <span class="logo-title">Data Analyst</span>
-                </div>
-            </a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="skills.html" class="nav-link">Skills</a>
-                <a href="experience.html" class="nav-link">Experience</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="education.html" class="nav-link active">Education</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                    <svg viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                </button>
-            </nav>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+  <div class="bg-glow-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-glow-orb orb-2" aria-hidden="true"></div>
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="top-nav" id="top-nav">
+    <div class="nav-container">
+      <div class="nav-branding">
+        <a href="index.html" class="nav-logo" aria-label="Aadya Raj Home">
+          <span class="logo-box">AR</span>
+        </a>
+        <div class="nav-brand-copy">
+          <span class="brand-title">Data & Analytics</span>
+          <span class="brand-subtitle">SQL · Excel · Power BI · Python</span>
         </div>
-    </header>
+      </div>
 
-    <main class="main-content">
-        <div class="container">
-            <div class="page-header">
-                <h1>Education & <span class="text-gradient">Certifications</span></h1>
-                <p>My academic background and continuous learning achievements.</p>
-            </div>
-            
-            <div class="grid grid-cols-2" style="max-width: 800px; margin: 0 auto;">
-                
-                <!-- Education -->
-                <div class="card">
-                    <h3 style="display:flex; align-items:center; gap:0.5rem; color:var(--primary);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-                        Education
-                    </h3>
-                    <h4 style="margin-bottom: 0.25rem;">International School of Management</h4>
-                    <p style="color:var(--secondary); font-weight:500; font-size:0.95rem;">Bachelor of Business Administration</p>
-                    <p style="font-size: 0.85rem; color:var(--text-secondary);">Jul 2019 – Aug 2022</p>
-                </div>
+      <nav class="nav-links" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="education.html" class="nav-link active">Education</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
 
-                <!-- Certification -->
-                <div class="card">
-                    <h3 style="display:flex; align-items:center; gap:0.5rem; color:var(--primary);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        Certifications
-                    </h3>
-                    <h4 style="margin-bottom: 0.25rem;">IIT Madras</h4>
-                    <p style="color:var(--secondary); font-weight:500; font-size:0.95rem;">Certified Data Analyst Training</p>
-                    <p style="font-size: 0.85rem; color:var(--text-secondary);">ExcelR</p>
-                </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-            </div>
+  <!-- MAIN CONTAINER -->
+  <main class="dashboard-grid single-page-grid">
+
+    <!-- 06 EDUCATION -->
+    <section class="panel-card full-width-panel">
+      <div class="section-header">
+        <div class="header-icon">🎓</div>
+        <h2>Education & Certifications</h2>
+      </div>
+
+      <div class="education-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+
+        <!-- Degree -->
+        <div class="education-card" style="background: var(--bg-subtle); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+          <div style="font-size: 2rem; margin-right: 1rem;">🎓</div>
+          <div class="education-details" style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.35rem;">
+            <h3 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Bachelor of Business Administration (BBA)</h3>
+            <p style="color: var(--accent-cyan); font-weight: 500; margin: 0;">International School of Management</p>
+          </div>
+          <span class="edu-date" style="white-space: nowrap;">Jul 2019 – Aug 2022</span>
         </div>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="process-strip">
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></div>
-                    <span class="process-label">Data</span><span class="process-sub">Collect</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg></div>
-                    <span class="process-label">Clean</span><span class="process-sub">Process</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
-                    <span class="process-label">Analyze</span><span class="process-sub">Explore</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></div>
-                    <span class="process-label">Visualize</span><span class="process-sub">Report</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
-                    <span class="process-label">Insight</span><span class="process-sub">Understand</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
-                    <span class="process-label">Decision</span><span class="process-sub">Act</span>
-                </div>
-            </div>
-            <p class="tagline">"Good data tells you what happened. Great analysis tells you why it matters."</p>
-            <p class="copyright">&copy; 2026 Aadya Raj. All rights reserved.</p>
+        <!-- Certification -->
+        <div class="education-card" style="background: var(--bg-subtle); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+          <div style="font-size: 2rem; margin-right: 1rem;">🏆</div>
+          <div class="education-details" style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.35rem;">
+            <h3 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Certified Data Analyst Training</h3>
+            <p style="color: var(--accent-cyan); font-weight: 500; margin: 0;">IIT Madras – ExcelR</p>
+          </div>
+          <span class="edu-date" style="white-space: nowrap;">Certified Training</span>
         </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="panel-card footer-panel">
+      <div class="footer-pipeline">
+        <div class="pipeline-track">
+          <div class="pipeline-node"><div class="node-circle">📦</div><span class="node-label">Data</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">🧹</div><span class="node-label">Clean</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">🔍</div><span class="node-label">Analyze</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">📊</div><span class="node-label">Visualize</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">💡</div><span class="node-label">Insight</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">🎯</div><span class="node-label">Decision</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-tagline">"Good data tells you what happened. Great analysis tells you why it matters."</p>
+        <p class="footer-copy">&copy; 2026 Aadya Raj. All rights reserved.</p>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
+  </main>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>

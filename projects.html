@@ -1,138 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Aadya Raj</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Aadya Raj | Data Analyst</title>
+  <meta name="description" content="Data Analysis and Dashboard Projects by Aadya Raj.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <div class="logo-mark">AR</div>
-                <div class="logo-text">
-                    <span class="logo-name">Aadya Raj</span>
-                    <span class="logo-title">Data Analyst</span>
-                </div>
-            </a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="skills.html" class="nav-link">Skills</a>
-                <a href="experience.html" class="nav-link">Experience</a>
-                <a href="projects.html" class="nav-link active">Projects</a>
-                <a href="education.html" class="nav-link">Education</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                    <svg viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                </button>
-            </nav>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+  <div class="bg-glow-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-glow-orb orb-2" aria-hidden="true"></div>
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="top-nav" id="top-nav">
+    <div class="nav-container">
+      <div class="nav-branding">
+        <a href="index.html" class="nav-logo" aria-label="Aadya Raj Home">
+          <span class="logo-box">AR</span>
+        </a>
+        <div class="nav-brand-copy">
+          <span class="brand-title">Data & Analytics</span>
+          <span class="brand-subtitle">SQL · Excel · Power BI · Python</span>
         </div>
-    </header>
+      </div>
 
-    <main class="main-content">
-        <div class="container">
-            <div class="page-header">
-                <h1>Featured <span class="text-gradient">Projects</span></h1>
-                <p>A selection of my recent data analysis and dashboarding projects.</p>
-            </div>
-            
-            <div class="grid grid-cols-3">
-                <!-- Project 1 -->
-                <div class="card project-card">
-                    <div class="project-img">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">KPI Performance Dashboard</h3>
-                        <p class="project-desc">Monitors productivity, quality, volume, turnaround time (TAT), and revenue trends across multiple teams.</p>
-                        <div class="project-tags">
-                            <span class="badge">Power BI</span>
-                            <span class="badge">SQL</span>
-                        </div>
-                    </div>
-                </div>
+      <nav class="nav-links" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
 
-                <!-- Project 2 -->
-                <div class="card project-card">
-                    <div class="project-img">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Operational Analytics Report</h3>
-                        <p class="project-desc">Analyzes operational data to identify trends, anomalies, and performance gaps to drive process improvements.</p>
-                        <div class="project-tags">
-                            <span class="badge">Excel</span>
-                            <span class="badge">SQL</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-                <!-- Project 3 -->
-                <div class="card project-card">
-                    <div class="project-img">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Reconciliation Tracker</h3>
-                        <p class="project-desc">Built reconciliation templates to track and resolve data discrepancies across multiple integrated systems.</p>
-                        <div class="project-tags">
-                            <span class="badge">Excel</span>
-                            <span class="badge">SQL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- MAIN CONTAINER -->
+  <main class="dashboard-grid single-page-grid">
+
+    <!-- 05 PROJECTS -->
+    <section class="panel-card full-width-panel">
+      <div class="section-header">
+        <div class="header-icon font-mono">&lt;/&gt;</div>
+        <h2>Featured Projects</h2>
+      </div>
+
+      <div class="projects-vertical-stack" style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+        <!-- Project 1 -->
+        <div class="project-card-inner">
+          <div class="project-header">
+            <h3 class="project-title">KPI Performance Dashboard</h3>
+          </div>
+
+          <div class="pipeline-flow-diagram">
+            <div class="stage-step"><div class="step-icon">🗄️</div><div class="step-label">SQL DB</div><div class="step-sub">(Source)</div></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="stage-step"><div class="step-icon">🔄</div><div class="step-label">Power Query</div><div class="step-sub">(Transform)</div></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="stage-step"><div class="step-icon">📊</div><div class="step-label">DAX Engine</div><div class="step-sub">(Modeling)</div></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="stage-step"><div class="step-icon">📈</div><div class="step-label">Power BI</div><div class="step-sub">(Dashboard)</div></div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>Designed and maintained <strong>10+ KPI reports and Power BI dashboards</strong> to monitor productivity, quality, volume, turnaround time (TAT), revenue trends, and customer mix across multiple departments.</li>
+            <li>Implemented complex <strong>DAX measures and data modeling</strong> to enable dynamic filtering and interactive drill-downs for leadership decision-making.</li>
+            <li>Enabled automated data refreshes and standardized cross-department reporting metrics.</li>
+          </ul>
+
+          <div class="feature-badges">
+            <span class="badge">Power BI</span>
+            <span class="badge">SQL</span>
+            <span class="badge">DAX</span>
+            <span class="badge">Data Modeling</span>
+          </div>
         </div>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="process-strip">
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></div>
-                    <span class="process-label">Data</span><span class="process-sub">Collect</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg></div>
-                    <span class="process-label">Clean</span><span class="process-sub">Process</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
-                    <span class="process-label">Analyze</span><span class="process-sub">Explore</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></div>
-                    <span class="process-label">Visualize</span><span class="process-sub">Report</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
-                    <span class="process-label">Insight</span><span class="process-sub">Understand</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                <div class="process-step">
-                    <div class="process-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
-                    <span class="process-label">Decision</span><span class="process-sub">Act</span>
-                </div>
-            </div>
-            <p class="tagline">"Good data tells you what happened. Great analysis tells you why it matters."</p>
-            <p class="copyright">&copy; 2026 Aadya Raj. All rights reserved.</p>
+        <!-- Project 2 -->
+        <div class="project-card-inner">
+          <div class="project-header">
+            <h3 class="project-title">Operational Analytics & Reporting Automation</h3>
+          </div>
+
+          <div class="pipeline-flow-diagram">
+            <div class="stage-step"><div class="step-icon">📑</div><div class="step-label">Raw Data</div><div class="step-sub">(Multiple Sources)</div></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="stage-step"><div class="step-icon">🔍</div><div class="step-label">SQL Analysis</div><div class="step-sub">(Querying)</div></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="stage-step"><div class="step-icon">📑</div><div class="step-label">Excel Templates</div><div class="step-sub">(XLOOKUP / Pivots)</div></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="stage-step"><div class="step-icon">🚀</div><div class="step-label">Insights</div><div class="step-sub">(40% Faster)</div></div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>Designed <strong>Advanced Excel reporting templates</strong> using XLOOKUP/VLOOKUP, Pivot Tables, and dynamic formulas, reducing reporting time by <strong>40% across 4 departments</strong>.</li>
+            <li>Executed SQL queries (joins, CTEs, aggregations) on 100,000+ records to identify operational bottlenecks and performance gaps.</li>
+            <li>Prepared weekly and monthly executive performance summaries tracking SLA adherence and accuracy.</li>
+          </ul>
+
+          <div class="feature-badges">
+            <span class="badge">Advanced Excel</span>
+            <span class="badge">SQL</span>
+            <span class="badge">Root Cause Analysis</span>
+            <span class="badge">Automation</span>
+          </div>
         </div>
+
+        <!-- Project 3 -->
+        <div class="project-card-inner">
+          <div class="project-header">
+            <h3 class="project-title">Data Reconciliation & Quality Tracker</h3>
+          </div>
+
+          <div class="pipeline-flow-diagram">
+            <div class="stage-step"><div class="step-icon">🌐</div><div class="step-label">5+ Sources</div><div class="step-sub">(Extraction)</div></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="stage-step"><div class="step-icon">🧹</div><div class="step-label">Cleansing</div><div class="step-sub">(Validation)</div></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="stage-step"><div class="step-icon">⚖️</div><div class="step-label">Reconciliation</div><div class="step-sub">(Discrepancy Checks)</div></div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="stage-step"><div class="step-icon">✅</div><div class="step-label">Quality Report</div><div class="step-sub">(95%+ SLA)</div></div>
+          </div>
+
+          <ul class="bullet-list">
+            <li>Built reconciliation templates and routines to track, validate, and resolve data discrepancies across multi-regional sources.</li>
+            <li>Performed root-cause analysis on <strong>20+ recurring data and performance issues</strong>, implementing corrective actions to ensure report reliability.</li>
+            <li>Maintained <strong>95%+ accuracy and strict SLA adherence</strong> across high-volume daily reviews.</li>
+          </ul>
+
+          <div class="feature-badges">
+            <span class="badge">Data Reconciliation</span>
+            <span class="badge">Data Quality</span>
+            <span class="badge">SQL</span>
+            <span class="badge">Excel</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="panel-card footer-panel">
+      <div class="footer-pipeline">
+        <div class="pipeline-track">
+          <div class="pipeline-node"><div class="node-circle">📦</div><span class="node-label">Data</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">🧹</div><span class="node-label">Clean</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">🔍</div><span class="node-label">Analyze</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">📊</div><span class="node-label">Visualize</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">💡</div><span class="node-label">Insight</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">🎯</div><span class="node-label">Decision</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-tagline">"Good data tells you what happened. Great analysis tells you why it matters."</p>
+        <p class="footer-copy">&copy; 2026 Aadya Raj. All rights reserved.</p>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
+  </main>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>

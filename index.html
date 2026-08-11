@@ -1,233 +1,320 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aadya Raj - Data Analyst Portfolio</title>
-    <meta name="description" content="Portfolio of Aadya Raj, a Data Analyst with 2+ years of experience in SQL, Excel, Power BI, and Python.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aadya Raj — Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Aadya Raj, a Data Analyst specializing in SQL, Advanced Excel, Power BI, and Python (Pandas).">
+  <meta name="keywords" content="Data Analyst, SQL, Excel, Power BI, Python, Pandas, Data Visualization, KPI Dashboards, Analytics">
+  <meta name="author" content="Aadya Raj">
+  
+  <meta property="og:title" content="Aadya Raj — Data Analyst Portfolio">
+  <meta property="og:description" content="2+ years of experience in data analysis, reporting, and deriving actionable insights.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <div class="logo-mark">AR</div>
-                <div class="logo-text">
-                    <span class="logo-name">Aadya Raj</span>
-                    <span class="logo-title">Data Analyst</span>
-                </div>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+  <div class="bg-glow-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-glow-orb orb-2" aria-hidden="true"></div>
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="top-nav" id="top-nav">
+    <div class="nav-container">
+      <div class="nav-branding">
+        <a href="index.html" class="nav-logo" aria-label="Aadya Raj Home">
+          <span class="logo-box">AR</span>
+        </a>
+        <div class="nav-brand-copy">
+          <span class="brand-title">Data & Analytics</span>
+          <span class="brand-subtitle">SQL · Excel · Power BI · Python</span>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- DASHBOARD MAIN CONTAINER -->
+  <main class="dashboard-grid">
+
+    <!-- 01 HERO / HOME -->
+    <section class="panel-card hero-panel">
+      <div class="hero-content-wrapper">
+        
+        <!-- Left Hero Details -->
+        <div class="hero-left">
+          <span class="greeting-tag">Hi, I'm</span>
+          <h1 class="hero-name">Aadya Raj</h1>
+          <h2 class="hero-role">Data Analyst</h2>
+          <p class="hero-tagline">
+            Transforming complex operational data into clear, actionable insights and dashboards.
+          </p>
+          <p class="hero-subtitle">
+            I help teams uncover <span class="typewriter-text" aria-live="polite"></span>
+          </p>
+
+          <div class="hero-highlight-chips">
+            <span class="hero-highlight-chip">Advanced SQL & Modeling</span>
+            <span class="hero-highlight-chip">Excel Reporting & Automation</span>
+            <span class="hero-highlight-chip">Power BI Dashboards</span>
+            <span class="hero-highlight-chip">Operational Analytics</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="assets/resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              <span>Resume PDF</span>
             </a>
             
-            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
-            
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="skills.html" class="nav-link">Skills</a>
-                <a href="experience.html" class="nav-link">Experience</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="education.html" class="nav-link">Education</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                    <!-- Sun/Moon SVG Toggle Icon -->
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    </svg>
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <section class="hero-section">
-                
-                <!-- Left: Hero Text -->
-                <div class="hero-content">
-                    <h1>Turning Data into <br><span class="text-gradient">Meaningful Decisions</span></h1>
-                    <p>Data Analyst with 2+ years of experience in data analysis, reporting and performance analytics. Skilled in SQL, Advanced Excel, Power BI and Python to transform data into actionable insights.</p>
-                    
-                    <div class="hero-actions">
-                        <a href="projects.html" class="btn btn-primary">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                            View My Work
-                        </a>
-                        <a href="assets/resume.pdf" target="_blank" class="btn btn-outline">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                            Download Resume
-                        </a>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/aadya-raj" target="_blank" class="social-link" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                        <a href="mailto:aadyaraj81@gmail.com" class="social-link" aria-label="Email">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        </a>
-                        <a href="tel:+917763049922" class="social-link" aria-label="Phone">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right: Dashboard Stats & Charts -->
-                <div class="dashboard-panel">
-                    
-                    <!-- Top Stats -->
-                    <div class="stat-grid">
-                        <div class="stat-card">
-                            <div class="stat-header">
-                                <svg class="stat-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                                Records Processed
-                            </div>
-                            <div class="stat-value">100K+</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-header">
-                                <svg class="stat-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                                KPI Reports Created
-                            </div>
-                            <div class="stat-value">10+</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-header">
-                                <svg class="stat-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                                Data Sources
-                            </div>
-                            <div class="stat-value">5+</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-header">
-                                <svg class="stat-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                Reporting Time Reduced
-                            </div>
-                            <div class="stat-value">40%</div>
-                        </div>
-                    </div>
-
-                    <!-- Charts -->
-                    <div class="chart-grid">
-                        <div class="chart-card">
-                            <h4>Performance Trend</h4>
-                            <div class="chart-container">
-                                <canvas id="performanceChart"></canvas>
-                            </div>
-                        </div>
-                        <div class="chart-card">
-                            <h4>Volume by Region</h4>
-                            <div class="chart-container">
-                                <canvas id="regionChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- Bottom Stat Strip -->
-            <section class="stat-strip">
-                <div class="strip-item">
-                    <span class="strip-val">2+</span>
-                    <span class="strip-label">Years Experience</span>
-                </div>
-                <div class="strip-item">
-                    <span class="strip-val">100K+</span>
-                    <span class="strip-label">Records Processed</span>
-                </div>
-                <div class="strip-item">
-                    <span class="strip-val">10+</span>
-                    <span class="strip-label">KPI Reports</span>
-                </div>
-                <div class="strip-item">
-                    <span class="strip-val">40%</span>
-                    <span class="strip-label">Faster Reporting</span>
-                </div>
-                <div class="strip-item">
-                    <span class="strip-val">95%+</span>
-                    <span class="strip-label">Accuracy & SLA Adherence</span>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="process-strip">
-                <div class="process-step">
-                    <div class="process-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                    </div>
-                    <span class="process-label">Data</span>
-                    <span class="process-sub">Collect</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                
-                <div class="process-step">
-                    <div class="process-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
-                    </div>
-                    <span class="process-label">Clean</span>
-                    <span class="process-sub">Process</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-
-                <div class="process-step">
-                    <div class="process-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                    </div>
-                    <span class="process-label">Analyze</span>
-                    <span class="process-sub">Explore</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-
-                <div class="process-step">
-                    <div class="process-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-                    </div>
-                    <span class="process-label">Visualize</span>
-                    <span class="process-sub">Report</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-
-                <div class="process-step">
-                    <div class="process-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                    </div>
-                    <span class="process-label">Insight</span>
-                    <span class="process-sub">Understand</span>
-                </div>
-                <svg class="process-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-
-                <div class="process-step">
-                    <div class="process-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                    </div>
-                    <span class="process-label">Decision</span>
-                    <span class="process-sub">Act</span>
-                </div>
+            <div class="social-links-inline">
+              <a href="https://linkedin.com/in/aadya-raj" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2z"/></svg>
+              </a>
+              <a href="mailto:aadyaraj81@gmail.com" class="social-btn" aria-label="Email Me">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
             </div>
+          </div>
 
-            <p class="tagline">"Good data tells you what happened. Great analysis tells you why it matters."</p>
-            <p class="copyright">&copy; 2026 Aadya Raj. All rights reserved.</p>
+          <!-- Hero Metric Strip -->
+          <div class="hero-stats-grid">
+            <div class="stat-box">
+              <span class="stat-number" data-target="2" data-suffix="+">0</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" data-target="100" data-suffix="K+">0</span>
+              <span class="stat-label">Records Processed</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" data-target="10" data-suffix="+">0</span>
+              <span class="stat-label">KPI Reports</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" data-target="40" data-suffix="%">0</span>
+              <span class="stat-label">Time Reduced</span>
+            </div>
+          </div>
         </div>
+
+        <!-- Right Hero Interactive 3D Pipeline Visualizer -->
+        <div class="hero-right">
+          <div class="pipeline-3d-stage" id="hero-pipeline-stage">
+            <div class="stage-ambient-light"></div>
+            
+            <svg class="pipeline-svg-container" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#22D3EE" />
+                  <stop offset="100%" stop-color="#A855F7" />
+                </linearGradient>
+                <linearGradient id="nodeGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="var(--pipeline-glow-start)" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="var(--pipeline-glow-end)" stop-opacity="0.95" />
+                </linearGradient>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+
+              <g class="iso-grid" stroke="rgba(34, 211, 238, 0.12)" stroke-width="1">
+                <path d="M300 80 L520 200 L300 320 L80 200 Z" fill="var(--pipeline-fill)" />
+                <path d="M300 80 L300 320" />
+                <path d="M80 200 L520 200" />
+                <path d="M190 140 L410 260" />
+                <path d="M410 140 L190 260" />
+              </g>
+
+              <path class="flow-path path-1" d="M160 140 Q 230 140, 240 210" stroke="url(#cyanPurple)" stroke-width="2.5" stroke-dasharray="6,6" />
+              <path class="flow-path path-2" d="M240 210 Q 270 230, 300 240" stroke="url(#cyanPurple)" stroke-width="2.5" stroke-dasharray="6,6" />
+              <path class="flow-path path-3" d="M300 240 Q 380 200, 440 140" stroke="url(#cyanPurple)" stroke-width="2.5" stroke-dasharray="6,6" />
+              <path class="flow-path path-4" d="M300 240 Q 370 270, 430 310" stroke="url(#cyanPurple)" stroke-width="2.5" stroke-dasharray="6,6" />
+              <path class="flow-path path-5" d="M300 240 Q 260 300, 200 350" stroke="url(#cyanPurple)" stroke-width="2.5" stroke-dasharray="6,6" />
+
+              <circle class="data-particle p1" r="4" fill="#22D3EE" filter="url(#glow)">
+                <animateMotion path="M160 140 Q 230 140, 240 210" dur="2.5s" repeatCount="indefinite" />
+              </circle>
+              <circle class="data-particle p2" r="4" fill="#A855F7" filter="url(#glow)">
+                <animateMotion path="M240 210 Q 270 230, 300 240" dur="2s" repeatCount="indefinite" />
+              </circle>
+              <circle class="data-particle p3" r="4" fill="#22D3EE" filter="url(#glow)">
+                <animateMotion path="M300 240 Q 380 200, 440 140" dur="3s" repeatCount="indefinite" />
+              </circle>
+              <circle class="data-particle p4" r="4" fill="#38BDF8" filter="url(#glow)">
+                <animateMotion path="M300 240 Q 370 270, 430 310" dur="2.8s" repeatCount="indefinite" />
+              </circle>
+              <circle class="data-particle p5" r="4" fill="#A855F7" filter="url(#glow)">
+                <animateMotion path="M300 240 Q 260 300, 200 350" dur="2.2s" repeatCount="indefinite" />
+              </circle>
+
+              <g class="central-cube" transform="translate(300, 230)">
+                <polygon points="0,-40 35,-20 0,0 -35,-20" fill="url(#cyanPurple)" opacity="0.85" />
+                <polygon points="-35,-20 0,0 0,30 -35,10" fill="#0284C7" opacity="0.8" />
+                <polygon points="0,0 35,-20 35,10 0,30" fill="#7E22CE" opacity="0.8" />
+
+                <g transform="translate(0, -35)">
+                  <polygon points="0,-25 25,-12 0,0 -25,-12" fill="#38BDF8" />
+                  <polygon points="-25,-12 0,0 0,15 -25,3" fill="#0369A1" />
+                  <polygon points="0,0 25,-12 25,3 0,15" fill="#6B21A8" />
+                </g>
+              </g>
+
+              <g class="stage-node node-ingest" transform="translate(160, 140)">
+                <title>Extract: gather operational and regional data from SQL databases and spreadsheets.</title>
+                <rect x="-60" y="-30" width="120" height="55" rx="10" fill="url(#nodeGlow)" stroke="#22D3EE" stroke-width="1.5" />
+                <text x="0" y="-8" text-anchor="middle" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">Extract</text>
+                <text x="0" y="12" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10">SQL / Excel</text>
+              </g>
+
+              <g class="stage-node node-process" transform="translate(240, 210)">
+                <title>Transform: cleanse, standardize, and reconcile datasets using Python and SQL CTEs.</title>
+                <rect x="-65" y="-30" width="130" height="55" rx="10" fill="url(#nodeGlow)" stroke="#38BDF8" stroke-width="1.5" />
+                <text x="0" y="-8" text-anchor="middle" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">Transform</text>
+                <text x="0" y="12" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10">Python / Pandas / SQL</text>
+              </g>
+
+              <g class="stage-node node-store" transform="translate(440, 140)">
+                <title>Model: build relational data models and DAX measures for reporting.</title>
+                <rect x="-60" y="-30" width="120" height="55" rx="10" fill="url(#nodeGlow)" stroke="#A855F7" stroke-width="1.5" />
+                <text x="0" y="-8" text-anchor="middle" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">Model</text>
+                <text x="0" y="12" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10">Power BI / DAX</text>
+              </g>
+
+              <g class="stage-node node-transform" transform="translate(430, 310)">
+                <title>Visualize: publish interactive executive dashboards and automated KPI templates.</title>
+                <rect x="-70" y="-30" width="140" height="55" rx="10" fill="url(#nodeGlow)" stroke="#A855F7" stroke-width="1.5" />
+                <text x="0" y="-8" text-anchor="middle" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">Visualize</text>
+                <text x="0" y="12" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10">Dashboards / Reports</text>
+              </g>
+
+              <g class="stage-node node-analyze" transform="translate(200, 350)">
+                <title>Insight: communicate root-cause analysis and business metrics to stakeholders.</title>
+                <rect x="-75" y="-30" width="150" height="55" rx="10" fill="url(#nodeGlow)" stroke="#22D3EE" stroke-width="1.5" />
+                <text x="0" y="-8" text-anchor="middle" fill="#22D3EE" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">Insight</text>
+                <text x="0" y="12" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10">Business Decisions</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Quick Navigation Hub Cards -->
+    <section class="panel-card navigation-hub-panel">
+      <div class="hub-grid">
+        <a href="about.html" class="hub-card">
+          <div class="hub-icon">👤</div>
+          <h3>About Me</h3>
+          <p>2+ years of experience in data analysis, reporting & operational analytics.</p>
+          <span class="hub-link">Explore Bio &rarr;</span>
+        </a>
+
+        <a href="skills.html" class="hub-card">
+          <div class="hub-icon">⚡</div>
+          <h3>Technical Skills</h3>
+          <p>SQL, Advanced Excel, Power BI, Python (Pandas), Data Modeling & Visualization.</p>
+          <span class="hub-link">View Tech Stack &rarr;</span>
+        </a>
+
+        <a href="experience.html" class="hub-card">
+          <div class="hub-icon">💼</div>
+          <h3>Experience</h3>
+          <p>Operational & Analytics impact at Cognizant (Client: Google).</p>
+          <span class="hub-link">View Timeline &rarr;</span>
+        </a>
+
+        <a href="projects.html" class="hub-card">
+          <div class="hub-icon">🚀</div>
+          <h3>Featured Projects</h3>
+          <p>KPI Performance Dashboards, Operational Analytics & Data Reconciliation.</p>
+          <span class="hub-link">View Projects &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- GitHub Activity -->
+    <section class="panel-card github-feed-panel">
+      <div class="section-header">
+        <div class="header-icon">🐙</div>
+        <h2>Latest GitHub Work</h2>
+      </div>
+      <div id="github-repo-grid" class="github-repo-grid">
+        <div class="hub-card" style="text-align: center; color: var(--text-muted);">
+          Loading repositories...
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="panel-card footer-panel">
+      <div class="footer-pipeline">
+        <div class="pipeline-track">
+          <div class="pipeline-node"><div class="node-circle">📦</div><span class="node-label">Data</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">🧹</div><span class="node-label">Clean</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">🔍</div><span class="node-label">Analyze</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">📊</div><span class="node-label">Visualize</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">💡</div><span class="node-label">Insight</span></div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-node"><div class="node-circle">🎯</div><span class="node-label">Decision</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-tagline">"Good data tells you what happened. Great analysis tells you why it matters."</p>
+        <p class="footer-copy">&copy; 2026 Aadya Raj. All rights reserved.</p>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
+  </main>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>
