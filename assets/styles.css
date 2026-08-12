@@ -1,8 +1,3 @@
-/* ==========================================================================
-   AKSHAT KUMAR — DATA ENGINEER PORTFOLIO DESIGN SYSTEM
-   Dark Dashboard Control-Panel Theme with Light Mode Toggle
-   ========================================================================== */
-
 :root {
   /* Fonts */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -99,6 +94,8 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   background-image: radial-gradient(circle at 15% 10%, rgba(34, 211, 238, 0.14), transparent 24%), radial-gradient(circle at 85% 12%, rgba(168, 85, 247, 0.12), transparent 20%), radial-gradient(circle at 60% 90%, rgba(56, 189, 248, 0.1), transparent 18%);
   background-repeat: no-repeat;
+  min-height: 100%;
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem));
 }
 
 body::before {
@@ -765,6 +762,28 @@ body::before {
   50% { opacity: 1; transform: scale(1.15); }
 }
 
+@keyframes connector-wave {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes arrow-glow {
+  0%, 100% {
+    transform: translateY(0);
+    color: #39d9ff;
+    text-shadow: 0 0 8px rgba(57, 217, 255, 0.6);
+  }
+  50% {
+    transform: translateY(-1px);
+    color: #ffffff;
+    text-shadow: 0 0 14px rgba(255, 255, 255, 0.9);
+  }
+}
+
 .back-to-top {
   position: fixed;
   right: 1.25rem;
@@ -1376,23 +1395,26 @@ body::before {
 .footer-panel {
   grid-column: span 12;
   padding-top: 3.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   text-align: center;
 }
 
 .footer-pipeline {
-  margin: 1rem 0 2rem 0;
-  overflow-x: auto;
-  padding: 1rem 0;
+  margin: 0.75rem 0 1.5rem 0;
+  overflow: visible;
+  padding: 0.75rem 0.5rem;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .pipeline-track {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  min-width: 700px;
-  margin: 0 auto;
+  gap: 0.4rem;
+  min-width: 0;
+  width: max-content;
   position: relative;
 }
 
@@ -1432,12 +1454,38 @@ body::before {
 }
 
 .pipeline-connector {
-  flex: 1;
-  max-width: 60px;
+  flex: 0 0 32px;
+  width: 32px;
   height: 2px;
   background: var(--gradient-accent);
   position: relative;
   top: -10px;
+}
+
+/* Desktop/footer connector dot animation (applies outside mobile breakpoint) */
+.footer-pipeline .pipeline-connector::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #e6e6ff 30%, #9b5cff 100%);
+  box-shadow: 0 0 10px rgba(255,255,255,0.95), 0 0 18px rgba(155,92,255,0.75);
+  animation: connector-dot 1.8s linear infinite;
+  will-change: transform, opacity;
+  pointer-events: none;
+  z-index: 99999;
+}
+
+@keyframes connector-dot {
+  0% { transform: translateX(-6px) translateY(-50%); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translateX(calc(100% + 6px)) translateY(-50%); opacity: 1; }
+  90% { opacity: 0; }
+  100% { transform: translateX(calc(100% + 6px)) translateY(-50%); opacity: 0; }
 }
 
 .footer-tagline {
@@ -1491,11 +1539,266 @@ body::before {
     font-size: 2.4rem;
   }
 
-  .skills-grid, .hub-grid, .contact-grid {
+  .skills-grid,
+  .hub-grid,
+  .contact-grid,
+  .education-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-grid {
+    width: 100% !important;
+  }
+
+  .contact-card,
+  .education-card,
+  .project-card-inner,
+  .github-feed-panel .hub-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-stats-grid,
+  .about-mini-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    padding: 0 1rem;
+    margin: 1rem auto 2rem auto;
+  }
+
+  .hero-panel {
+    min-height: auto;
+  }
+
+  .single-page-grid {
+    min-height: auto;
+    justify-content: normal;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-content-wrapper {
+    gap: 1.25rem;
+  }
+
+  .hero-right {
+    justify-content: flex-start;
+  }
+
+  .hero-right::before {
+    width: 200px;
+    height: 200px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .pipeline-3d-stage {
+    height: 300px;
+  }
+
+  .hero-tagline,
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-stats-grid,
+  .about-mini-stats,
+  .skills-grid,
+  .hub-grid,
+  .contact-grid,
+  .education-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-stats-grid, .about-mini-stats {
-    grid-template-columns: repeat(2, 1fr);
+  .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .education-card .edu-date {
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .github-feed-panel .github-repo-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .pipeline-flow-diagram {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .stage-step {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .flow-arrow {
+    flex: 1 1 100%;
+    text-align: center;
+    width: 100%;
+  }
+
+  .github-feed-panel .hub-card {
+    min-width: auto;
+  }
+
+  /* Mobile Footer Pipeline */
+  .footer-pipeline {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    padding: 1rem 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-pipeline .pipeline-track {
+    width: auto;
+    max-width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.75rem;
+  }
+
+  /* Each step */
+  .footer-pipeline .pipeline-node {
+    flex: 0 0 78px;
+    width: 78px;
+    min-width: 78px;
+    text-align: center;
+  }
+
+  /* Circle */
+  .footer-pipeline .node-circle {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 6px;
+  }
+
+  /* Text */
+  .footer-pipeline .node-label {
+    display: block;
+    font-size: 0.68rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  /* Arrows between steps */
+  .footer-pipeline .pipeline-connector {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 2px;
+
+    margin-top: 24px;
+
+    background: linear-gradient(90deg, #39d9ff, #9b5cff);
+    background-size: 200% 100%;
+    animation: connector-wave 2.5s ease-in-out infinite;
+
+    position: relative;
+    overflow: visible;
+  }
+
+  /* Dot animation that travels along the connector (plain line with moving dot) */
+  .footer-pipeline .pipeline-connector::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #e6e6ff 30%, #9b5cff 100%);
+    box-shadow: 0 0 10px rgba(255,255,255,0.95), 0 0 18px rgba(155,92,255,0.75);
+    animation: connector-dot 1.8s linear infinite;
+    will-change: transform, opacity;
+    pointer-events: none;
+    z-index: 99999;
+  }
+
+  @keyframes connector-dot {
+    0% { transform: translateX(-6px) translateY(-50%); opacity: 0; }
+    10% { opacity: 1; }
+    50% { transform: translateX(calc(100% + 6px)) translateY(-50%); opacity: 1; }
+    90% { opacity: 0; }
+    100% { transform: translateX(calc(100% + 6px)) translateY(-50%); opacity: 0; }
+  }
+
+  @media (max-width: 480px) {
+    .footer-pipeline .pipeline-connector::after {
+      width: 10px;
+      height: 10px;
+      box-shadow: 0 0 8px rgba(255,255,255,0.95), 0 0 12px rgba(155,92,255,0.6);
+      animation-duration: 1.2s;
+    }
+  }
+
+  /* Force a new row after Analyze */
+  .footer-pipeline .pipeline-connector:nth-child(6) {
+    flex-basis: 100%;
+    width: 0;
+    height: 0;
+    margin: 0;
+    background: none;
+  }
+
+  .footer-pipeline .pipeline-connector:nth-child(6)::after {
+    display: none;
+  }
+
+  .footer-pipeline .node-circle {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
+  }
+
+  .footer-pipeline .node-label {
+    font-size: 0.68rem;
+    white-space: nowrap;
+  }
+
+  .footer-pipeline .node-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .footer-pipeline .node-label {
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+
+  .footer-pipeline .pipeline-track::before {
+    content: '';
+    display: none;
+  }
+
+  .pipeline-flow-diagram {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .hero-stats-grid,
+  .about-mini-stats {
+    grid-template-columns: 1fr;
   }
 }
