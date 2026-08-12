@@ -1605,26 +1605,89 @@ body::before {
   .footer-pipeline {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
-    padding: 0.75rem 0.25rem;
+    overflow: hidden;
+    padding: 1rem 0.5rem;
     display: flex;
     justify-content: center;
   }
 
   .footer-pipeline .pipeline-track {
     width: 100%;
-    max-width: 390px;
+    max-width: 360px;
     min-width: 0;
+
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: center;
-    gap: 0.35rem;
+
+    column-gap: 8px;
+    row-gap: 18px;
   }
 
+  /* Each step */
   .footer-pipeline .pipeline-node {
-    flex: 1 1 0;
-    min-width: 0;
+    flex: 0 0 78px;
+    width: 78px;
+    min-width: 78px;
     text-align: center;
+  }
+
+  /* Circle */
+  .footer-pipeline .node-circle {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 6px;
+  }
+
+  /* Text */
+  .footer-pipeline .node-label {
+    display: block;
+    font-size: 0.68rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  /* Arrows between steps */
+  .footer-pipeline .pipeline-connector {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 2px;
+
+    margin-top: 24px;
+
+    background: linear-gradient(
+      90deg,
+      #39d9ff,
+      #9b5cff
+    );
+
+    position: relative;
+  }
+
+  /* Arrow head */
+  .footer-pipeline .pipeline-connector::after {
+    content: "→";
+    position: absolute;
+    right: -2px;
+    top: -10px;
+
+    font-size: 16px;
+    line-height: 1;
+    color: #39d9ff;
+  }
+
+  /* Force a new row after Analyze */
+  .footer-pipeline .pipeline-connector:nth-child(6) {
+    flex-basis: 100%;
+    width: 0;
+    height: 0;
+    margin: 0;
+    background: none;
+  }
+
+  .footer-pipeline .pipeline-connector:nth-child(6)::after {
+    display: none;
   }
 
   .footer-pipeline .node-circle {
