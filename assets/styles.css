@@ -1597,8 +1597,22 @@ body::before {
     min-width: auto;
   }
 
+  .footer-pipeline {
+    padding-left: 1.75rem;
+    padding-right: 0.75rem;
+  }
+
   .footer-pipeline .pipeline-track {
     min-width: auto;
+    padding-left: 1rem;
+    scroll-padding-left: 1rem;
+  }
+
+  .footer-pipeline .pipeline-track::before {
+    content: '';
+    display: block;
+    width: 1rem;
+    flex-shrink: 0;
   }
 
   .pipeline-flow-diagram {
