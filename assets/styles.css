@@ -1401,7 +1401,7 @@ body::before {
 
 .footer-pipeline {
   margin: 0.75rem 0 1.5rem 0;
-  overflow-x: auto;
+  overflow: visible;
   padding: 0.75rem 0.5rem;
   max-width: 100%;
   display: flex;
@@ -1685,18 +1685,39 @@ body::before {
     overflow: visible;
   }
 
-  /* Arrow head */
+  /* Dot animation that travels along the connector (plain line with moving dot) */
   .footer-pipeline .pipeline-connector::after {
-    content: "→";
+    content: '';
     position: absolute;
-    right: -2px;
-    top: -10px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(90deg,#ffffff,#9b5cff);
+    box-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 14px rgba(155,92,255,0.6);
+    animation: connector-dot 1.6s linear infinite;
+    will-change: transform;
+    pointer-events: none;
+    z-index: 5;
+  }
 
-    font-size: 16px;
-    line-height: 1;
-    color: #39d9ff;
-    text-shadow: 0 0 8px rgba(57, 217, 255, 0.6);
-    animation: arrow-glow 1.5s ease-in-out infinite;
+  @keyframes connector-dot {
+    0% { transform: translateX(-6px) translateY(-50%); opacity: 0; }
+    10% { opacity: 1; }
+    50% { transform: translateX(calc(100% + 6px)) translateY(-50%); opacity: 1; }
+    90% { opacity: 0; }
+    100% { transform: translateX(calc(100% + 6px)) translateY(-50%); opacity: 0; }
+  }
+
+  @media (max-width: 480px) {
+    .footer-pipeline .pipeline-connector::after {
+      width: 8px;
+      height: 8px;
+      box-shadow: 0 0 6px rgba(255,255,255,0.9), 0 0 10px rgba(155,92,255,0.5);
+      animation-duration: 1.2s;
+    }
   }
 
   /* Force a new row after Analyze */
