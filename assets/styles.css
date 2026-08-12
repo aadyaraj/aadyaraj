@@ -1606,18 +1606,26 @@ body::before {
     padding-right: 0.75rem;
   }
 
+  .footer-pipeline {
+    display: flex;
+    justify-content: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .footer-pipeline .pipeline-track {
     min-width: 0;
-    width: max-content;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
     padding-left: 0;
     scroll-padding-left: 0.5rem;
   }
 
   .footer-pipeline .pipeline-track::before {
     content: '';
-    display: block;
-    width: 0;
-    flex-shrink: 0;
+    display: none;
   }
 
   .pipeline-flow-diagram {
