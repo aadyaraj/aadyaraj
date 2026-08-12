@@ -1723,14 +1723,6 @@ body::before {
     white-space: nowrap;
   }
 
-  .footer-pipeline .pipeline-connector {
-    flex: 0 0 14px;
-    width: 14px;
-    height: 2px;
-    position: relative;
-    top: -10px;
-  }
-
   .footer-pipeline .node-circle {
     width: 48px;
     height: 48px;
@@ -1739,10 +1731,6 @@ body::before {
   .footer-pipeline .node-label {
     font-size: 0.72rem;
     white-space: nowrap;
-  }
-
-  .footer-pipeline .pipeline-connector {
-    display: block;
   }
 
   .footer-pipeline .pipeline-track::before {
