@@ -1462,6 +1462,32 @@ body::before {
   top: -10px;
 }
 
+/* Desktop/footer connector dot animation (applies outside mobile breakpoint) */
+.footer-pipeline .pipeline-connector::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #e6e6ff 30%, #9b5cff 100%);
+  box-shadow: 0 0 10px rgba(255,255,255,0.95), 0 0 18px rgba(155,92,255,0.75);
+  animation: connector-dot 1.8s linear infinite;
+  will-change: transform, opacity;
+  pointer-events: none;
+  z-index: 99999;
+}
+
+@keyframes connector-dot {
+  0% { transform: translateX(-6px) translateY(-50%); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translateX(calc(100% + 6px)) translateY(-50%); opacity: 1; }
+  90% { opacity: 0; }
+  100% { transform: translateX(calc(100% + 6px)) translateY(-50%); opacity: 0; }
+}
+
 .footer-tagline {
   font-size: 1rem;
   font-weight: 600;
@@ -1692,15 +1718,15 @@ body::before {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background: linear-gradient(90deg,#ffffff,#9b5cff);
-    box-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 14px rgba(155,92,255,0.6);
-    animation: connector-dot 1.6s linear infinite;
-    will-change: transform;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #e6e6ff 30%, #9b5cff 100%);
+    box-shadow: 0 0 10px rgba(255,255,255,0.95), 0 0 18px rgba(155,92,255,0.75);
+    animation: connector-dot 1.8s linear infinite;
+    will-change: transform, opacity;
     pointer-events: none;
-    z-index: 5;
+    z-index: 99999;
   }
 
   @keyframes connector-dot {
@@ -1713,9 +1739,9 @@ body::before {
 
   @media (max-width: 480px) {
     .footer-pipeline .pipeline-connector::after {
-      width: 8px;
-      height: 8px;
-      box-shadow: 0 0 6px rgba(255,255,255,0.9), 0 0 10px rgba(155,92,255,0.5);
+      width: 10px;
+      height: 10px;
+      box-shadow: 0 0 8px rgba(255,255,255,0.95), 0 0 12px rgba(155,92,255,0.6);
       animation-duration: 1.2s;
     }
   }
