@@ -1377,17 +1377,19 @@ body::before {
   text-align: center;
 }
 
-..footer-pipeline {
-  margin: 1rem 0 2rem 0;
+.footer-pipeline {
+  margin: 0.75rem 0 1.5rem 0;
   overflow-x: auto;
-  padding: 1rem 0 1rem 0.5rem;
+  padding: 0.75rem 0.5rem;
   max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .pipeline-track {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 0.4rem;
   min-width: 0;
   width: max-content;
@@ -1430,8 +1432,8 @@ body::before {
 }
 
 .pipeline-connector {
-  flex: 0 0 42px;
-  width: 42px;
+  flex: 0 0 32px;
+  width: 32px;
   height: 2px;
   background: var(--gradient-accent);
   position: relative;
