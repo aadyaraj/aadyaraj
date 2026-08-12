@@ -1602,25 +1602,42 @@ body::before {
   }
 
   .footer-pipeline {
-    padding-left: 1rem;
-    padding-right: 0.75rem;
-  }
-
-  .footer-pipeline {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0.75rem 0.5rem;
     display: flex;
     justify-content: center;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
   }
 
   .footer-pipeline .pipeline-track {
+    width: 100%;
+    max-width: 420px;
     min-width: 0;
-    width: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    padding-left: 0;
-    scroll-padding-left: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 0.5rem;
+    justify-items: center;
+    align-items: start;
+  }
+
+  .footer-pipeline .pipeline-node {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .footer-pipeline .node-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .footer-pipeline .node-label {
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+
+  .footer-pipeline .pipeline-connector {
+    display: none;
   }
 
   .footer-pipeline .pipeline-track::before {
