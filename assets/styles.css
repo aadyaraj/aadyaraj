@@ -99,6 +99,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   background-image: radial-gradient(circle at 15% 10%, rgba(34, 211, 238, 0.14), transparent 24%), radial-gradient(circle at 85% 12%, rgba(168, 85, 247, 0.12), transparent 20%), radial-gradient(circle at 60% 90%, rgba(56, 189, 248, 0.1), transparent 18%);
   background-repeat: no-repeat;
+  min-height: 100%;
 }
 
 body::before {
@@ -1524,6 +1525,12 @@ body::before {
     min-height: auto;
   }
 
+  .single-page-grid {
+    min-height: auto;
+    justify-content: normal;
+    padding-bottom: 2rem;
+  }
+
   .hero-content-wrapper {
     gap: 1.25rem;
   }
@@ -1572,6 +1579,21 @@ body::before {
     flex-direction: column;
     align-items: stretch;
     gap: 1rem;
+  }
+
+  .pipeline-flow-diagram {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .stage-step {
+    min-width: 110px;
+    width: calc(50% - 0.5rem);
+  }
+
+  .flow-arrow {
+    flex: 1 1 100%;
+    text-align: center;
   }
 
   .github-feed-panel .hub-card {
