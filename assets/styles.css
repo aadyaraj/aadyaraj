@@ -1598,14 +1598,14 @@ body::before {
   }
 
   .footer-pipeline {
-    padding-left: 1.75rem;
+    padding-left: 1rem;
     padding-right: 0.75rem;
   }
 
   .footer-pipeline .pipeline-track {
     min-width: auto;
-    padding-left: 1rem;
-    scroll-padding-left: 1rem;
+    padding-left: 0.25rem;
+    scroll-padding-left: 0.75rem;
   }
 
   .footer-pipeline .pipeline-track::before {
